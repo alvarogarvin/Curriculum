@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    <title> Álvaro Garvín Guerrero - CV </title>
+</head>
+
+<body class="bg-color-primario">
+    <div class="container h-100">
+        <div class="row py-4 px-5 h-100 bg-color-secundario">
+            <div class="col-8 pr-4" id="informacion">
+                <div class="row bg-color-primario t-color-secundario" id="info">
+                    <div class="col d-flex justify-content-around flex-column">
+                        <div class="row">
+                            <div class="col">
+                                <h4><u> Formación </u></h4>
+                                <div class="px-3">
+                                    <div class="row espacio">
+                                        <p class="info"> Titulo Escolar de Bachiller - <a href="https://www.iesvirgendelcarmen.com/" target="_blank">Virgen del Carmen, Jaén </a></p>
+                                        <p> 2019 - 2021 </p>
+                                    </div>
+                                    <div class="row espacio">
+                                        <p class="info"> Curso de Programación de Videojuegos con GameMaker - <a href="https://upmj.es/" target="_blank"> Universidad Popular, Jaén </a></p>
+                                        <p> 2017 - 2019 </p>
+                                    </div>
+                                    <div class="row espacio">
+                                        <p class="info"> Curso Academico de Inglés - <a href="https://centrobritanicojaen.com/" target="_blank"> Centro Britanico Paseo de la Estacion, Jaén </a></p>
+                                        <p> 2016 - 2020 </p>
+                                    </div>
+                                    <div class="row espacio">
+                                        <p class="info"> Titulo Formacion Profesional Superior de Desarrollo de Aplicaciones Multiplataforma - <a href="https://escuelaestech.es/" target="_blank"> Escuela Estech, Linares </a></p>
+                                        <p> 2021 - 2023 </p>
+                                    </div>
+                                    <div class="row espacio">
+                                        <p class="info"> Grado en Ingeniería Informática - <a href="https://www.ujaen.es/" target="_blank"> Universidad de Jaén, Jaén </a></p>
+                                        <p> 2023 - Actualidad </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mx-3">
+                                <div class="row">
+                                    <div class="col text-center mb-3">
+                                        <button class="btn boton" onclick="mostrarSlide(0)"> Experiencia Laboral </button>
+                                        <button class="btn boton-secundario" onclick="mostrarSlide(1)"> Gustos y aficiones </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="slider" class="col slider-container">
+                                        <div class="slider-item mr-3">
+                                            <h4> Gustos y Aficiones </h4>
+                                            <p> Desde siempre me ha gustado el deporte, ya sea futbol sala, futbol 11, padel o salir a correr entre otros, he sido toda mi vida un chico muy energico y lo he podido focalizar en el trabajo para poder seguir intentando mejorar o buscar nuevos proyectos para ayudar al equipo. </p>
+                                            <p> Soy muy sociable, nunca he tenido ningun problema en relacionarme con las personas y estoy dispuesto a ayudar en todo lo posible. </p>
+                                            <p> Me considero una persona muy alegre, que siempre busca el lado positivo de las cosas y las cosas malas aprender de ellas y reenfocarlas en algo positivo para sacarle el maximo partido. </p>
+                                        </div>
+                                        <div class="slider-item">
+                                            <h4> Experiencia Laboral </h4>
+                                            <ul>
+                                                <li><b> Practicas de empresa </b></li>
+                                                <p> Al terminar el modulo superior, hice las practicas de empresa en <a href="https://www.bowlinglinares.com/" target="_blank"> Bowling Linares </a>, donde pude aprender mas sobre base de datos, diseño web con typescript, tailwind y otras, backed tanto en php como en VUE </p>
+                                                <li><b> 8 meses en Bowling Linares </b></li>
+                                                <p> Luego de terminar las practicas de empresa, bowling linares me ofreció trabajar a tiempo parcial para terminar el proyecto que habia empezado en las practicas, confiando en mi para ser el que manejase el desarrollo del mismo. Estuve focalizado tanto en backend como en el diseño y administración de la base de datos </p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="habilidades">
+                            <div class="col">
+                                <h4><u> Mis habilidades profesionales </u></h4>
+                                <div class="row bg-color-primario d-flex justify-content-center pt-3">
+                                    <section>
+                                        <img src="img/Bootstrap.png" title="Bootstrap 5">
+                                        <img src="img/Android_Studio.png" title="Android Studio">
+                                        <img src="img/CSS3.png" title="CSS 3">
+                                        <img src="img/DBeaver.png" title="DBeaver">
+                                        <img src="img/HTML5.png" title="HTML5">
+                                        <img src="img/Laravel.png" title="Laravel">
+                                        <img src="img/VUE3.png" title="VUE 3">
+                                        <img src="img/XCode.png" title="XCode">
+                                        <img src="img/PHP.png" title="PHP">
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 bg-color-primario">
+                <div class="row d-flex justify-content-center fondo-foto-carnet border-bottom">
+                    <img src="./Foto Carnet.jpg" id="foto-carnet" class="my-3 rounded-bottom"/>
+                    <h4 class="t-color-secundario"> Álvaro Garvín Guerrero </h4>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row mt-1">
+                                    <div class="col">
+                                        <h4 class="t-color-secundario"><u> Información Personal </u></h3>
+                                    </div>
+                                </div>
+                                <div class="row m-1" id="info_personal">
+                                    <div class="col d-flex justify-content-around flex-column">
+                                        <div class="row espacio">
+                                            <span><img src="img/Correo.png"></span>
+                                            <a href="mailto:garvinguerreroalvaro@gmail.com"> garvinguerreroalvaro@gmail.com </a>
+                                        </div>
+                                        <div class="row espacio">
+                                            <span><img src="img/Telefono.png"></span>
+                                            <a href="tel:644977970"> +34644977970 </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col t-color-secundario">
+                                        <h4><u> Sobre mí </u></h4>
+                                        <p> Soy un chico con un gran entusiasmo por la programación y muy resolutivo para los problemas, siempre de una u otra manera acabo resolviendolos, no me doy por vencido hasta que acabo con el trabajo.</p>
+                                        <p> Una de mis mejores cualidades profesiones es el manejo en base de datos, he estudiado y trabajado con ellas durante varios años, eso no significa que solo sepa hacer eso, ya que tengo gran base en varios ambitos como el desarrollo de aplicaciones web o moviles </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarSlide(index) {
+          const slider = document.getElementById('slider');
+          const width = slider.clientWidth;
+          slider.scrollLeft = index * width;
+        }
+    </script>
+</body>
+</html>
