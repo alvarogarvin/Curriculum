@@ -3,147 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
     <title> Álvaro Garvín Guerrero - CV </title>
 </head>
 
 <body class="bg-color-primario">
-    <div class="container">
-        <div class="row py-4 px-5 bg-color-secundario" id="cuerpo">
-            <div class="col-8 pr-4" id="informacion">
-                <div class="row bg-color-primario t-color-secundario" id="info">
-                    <div class="col d-flex justify-content-around flex-column">
-                        <div class="row">
-                            <div class="col">
-                                <h4><u> Formación </u></h4>
-                                <div class="px-3">
-                                    <div class="row espacio">
-                                        <p class="info"> Título Escolar de Bachiller - <a href="https://www.iesvirgendelcarmen.com/" target="_blank">Virgen del Carmen, Jaén </a></p>
-                                        <p> 2019 - 2021 </p>
-                                    </div>
-                                    <div class="row espacio">
-                                        <p class="info"> Curso de Programación de Videojuegos con GameMaker - <a href="https://upmj.es/" target="_blank"> Universidad Popular, Jaén </a></p>
-                                        <p> 2017 - 2019 </p>
-                                    </div>
-                                    <div class="row espacio">
-                                        <p class="info"> Curso Académico de Inglés - <a href="https://centrobritanicojaen.com/" target="_blank"> Centro Británico Paseo de la Estación, Jaén </a></p>
-                                        <p> 2016 - 2020 </p>
-                                    </div>
-                                    <div class="row espacio">
-                                        <p class="info"> Título Formación Profesional Superior de Desarrollo de Aplicaciones Multiplataforma - <a href="https://escuelaestech.es/" target="_blank"> Escuela Estech, Linares </a></p>
-                                        <p> 2021 - 2023 </p>
-                                    </div>
-                                    <div class="row espacio">
-                                        <p class="info"> Grado en Ingeniería Informática - <a href="https://www.ujaen.es/" target="_blank"> Universidad de Jaén, Jaén </a></p>
-                                        <p> 2023 - Actualidad </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mx-3">
-                                <div class="row">
-                                    <div class="col text-center mb-3">
-                                        <button class="btn boton" onclick="mostrarSlide(0)"> Experiencia Laboral </button>
-                                        <button class="btn boton-secundario" onclick="mostrarSlide(1)"> Gustos y aficiones </button>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div id="slider" class="col slider-container">
-                                        <div class="slider-item mr-3">
-                                            <h4> Gustos y Aficiones </h4>
-                                            <p> Desde una edad temprana he sentido un gran interés por el deporte, practicando disciplinas como fútbol sala, fútbol 11, pádel y running, entre otras. Esta pasión me ha permitido canalizar mi energía de forma positiva, lo cual se refleja también en mi entorno profesional: me esfuerzo constantemente por mejorar, asumir nuevos retos y contribuir al crecimiento del equipo. </p>
-                                            <p> Me considero una persona sociable y cercana, con gran facilidad para establecer relaciones interpersonales y siempre dispuesta a colaborar y prestar ayuda cuando se necesita. </p>
-                                            <p> Además, afronto cada situación con una actitud positiva. Suelo encontrar el lado constructivo incluso en las dificultades, lo que me permite aprender de cada experiencia y transformarla en una oportunidad de crecimiento personal y profesional. </p>
+    <div class="container bg-color-secundario">
+        <div id="modo-escritorio">
+            <div class="row py-3 px-4" id="cuerpo">
+                <div class="col-8 pr-4" id="informacion">
+                    <div class="row bg-color-primario t-color-secundario" id="info">
+                        <div class="col d-flex justify-content-around flex-column">
+                            <div class="row" id="acordeon">
+                                <div class="col">
+                                    <h4><u> Formación </u></h4>
+                                    <div class="px-3">
+                                        <div class="row espacio">
+                                            <p class="info"> Título Escolar de Bachiller - <a
+                                                    href="https://www.iesvirgendelcarmen.com/" target="_blank">Virgen del
+                                                    Carmen, Jaén </a></p>
+                                            <p> 2019 - 2021 </p>
                                         </div>
-                                        <div class="slider-item">
-                                            <h4> Experiencia Laboral </h4>
-                                            <ul>
-                                                <li><b> Prácticas de empresa </b></li>
-                                                <p> Al terminar el modulo superior, hice las practicas de empresa en <a href="https://www.bowlinglinares.com/" target="_blank"> Bowling Linares </a>, donde pude aprender mas sobre base de datos, diseño web con typescript, tailwind y otras, backed tanto en php como en VUE </p>
-                                                <li><b> 8 meses en Bowling Linares </b></li>
-                                                <p> Luego de terminar las practicas de empresa, bowling linares me ofreció trabajar a tiempo parcial para terminar el proyecto que habia empezado en las practicas, confiando en mi para ser el que manejase el desarrollo del mismo. Estuve focalizado tanto en backend como en el diseño y administración de la base de datos </p>
-                                            </ul>
+                                        <div class="row espacio">
+                                            <p class="info"> Curso de Programación de Videojuegos con GameMaker - <a
+                                                    href="https://upmj.es/" target="_blank"> Universidad Popular, Jaén </a>
+                                            </p>
+                                            <p> 2017 - 2019 </p>
+                                        </div>
+                                        <div class="row espacio">
+                                            <p class="info"> Curso Académico de Inglés - <a
+                                                    href="https://centrobritanicojaen.com/" target="_blank"> Centro
+                                                    Británico Paseo de la Estación, Jaén </a></p>
+                                            <p> 2016 - 2020 </p>
+                                        </div>
+                                        <div class="row espacio">
+                                            <p class="info"> Título Formación Profesional Superior de Desarrollo de
+                                                Aplicaciones Multiplataforma - <a href="https://escuelaestech.es/"
+                                                    target="_blank"> Escuela Estech, Linares </a></p>
+                                            <p> 2021 - 2023 </p>
+                                        </div>
+                                        <div class="row espacio">
+                                            <p class="info"> Grado en Ingeniería Informática - <a
+                                                    href="https://www.ujaen.es/" target="_blank"> Universidad de Jaén, Jaén
+                                                </a></p>
+                                            <p> 2023 - Actualidad </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col mx-3">
+                                    <div class="row">
+                                        <div class="col text-center mb-3">
+                                            <button class="btn boton" onclick="mostrarSlide(0)"> Gustos y
+                                                aficiones
+                                            </button>
+                                            <button class="btn boton-secundario" onclick="mostrarSlide(1)"> Experiencia Laboral </button>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div id="slider" class="col slider-container">
+                                            <div class="slider-item mr-3">
+                                                <h4> Gustos y Aficiones </h4>
+                                                <p> Desde una edad temprana he sentido un gran interés por el deporte,
+                                                    practicando disciplinas como fútbol sala, fútbol 11, pádel y running,
+                                                    entre otras. Esta pasión me ha permitido canalizar mi energía de forma
+                                                    positiva, lo cual se refleja también en mi entorno profesional: me
+                                                    esfuerzo constantemente por mejorar, asumir nuevos retos y contribuir al
+                                                    crecimiento del equipo. </p>
+                                                <p> Me considero una persona sociable y cercana, con gran facilidad para
+                                                    establecer relaciones interpersonales y siempre dispuesta a colaborar y
+                                                    prestar ayuda cuando se necesita. </p>
+                                                <p> Además, afronto cada situación con una actitud positiva. Suelo encontrar
+                                                    el lado constructivo incluso en las dificultades, lo que me permite
+                                                    aprender de cada experiencia y transformarla en una oportunidad de
+                                                    crecimiento personal y profesional. </p>
+                                            </div>
+                                            <div class="slider-item">
+                                                <h4> Experiencia Laboral </h4>
+                                                <ul>
+                                                    <li><b> Prácticas de empresa </b></li>
+                                                    <p> Al terminar el modulo superior, hice las practicas de empresa en <a
+                                                            href="https://www.bowlinglinares.com/" target="_blank"> Bowling
+                                                            Linares </a>, donde pude aprender mas sobre base de datos,
+                                                        diseño web con typescript, tailwind y otras, backed tanto en php
+                                                        como en VUE </p>
+                                                    <li><b> 8 meses en Bowling Linares </b></li>
+                                                    <p> Luego de terminar las practicas de empresa, bowling linares me
+                                                        ofreció trabajar a tiempo parcial para terminar el proyecto que
+                                                        habia empezado en las practicas, confiando en mi para ser el que
+                                                        manejase el desarrollo del mismo. Estuve focalizado tanto en backend
+                                                        como en el diseño y administración de la base de datos </p>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="habilidades">
+                                <div class="col">
+                                    <h4><u> Mis habilidades profesionales </u></h4>
+                                    <div class="row bg-color-primario d-flex justify-content-center pt-3 px-3">
+                                        <section>
+                                            <img src="img/Bootstrap.png" title="Bootstrap 5">
+                                            <img src="img/Android_Studio.png" title="Android Studio">
+                                            <img src="img/CSS3.png" title="CSS 3">
+                                            <img src="img/DBeaver.png" title="DBeaver">
+                                            <img src="img/HTML5.png" title="HTML5">
+                                            <img src="img/Laravel.png" title="Laravel">
+                                            <img src="img/VUE3.png" title="VUE 3">
+                                            <img src="img/XCode.png" title="XCode">
+                                            <img src="img/PHP.png" title="PHP">
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row" id="habilidades">
-                            <div class="col">
-                                <h4><u> Mis habilidades profesionales </u></h4>
-                                <div class="row bg-color-primario d-flex justify-content-center pt-3">
-                                    <section>
-                                        <img src="img/Bootstrap.png" title="Bootstrap 5">
-                                        <img src="img/Android_Studio.png" title="Android Studio">
-                                        <img src="img/CSS3.png" title="CSS 3">
-                                        <img src="img/DBeaver.png" title="DBeaver">
-                                        <img src="img/HTML5.png" title="HTML5">
-                                        <img src="img/Laravel.png" title="Laravel">
-                                        <img src="img/VUE3.png" title="VUE 3">
-                                        <img src="img/XCode.png" title="XCode">
-                                        <img src="img/PHP.png" title="PHP">
-                                    </section>
+                    </div>
+                </div>
+                <div class="col-4 bg-color-primario">
+                    <div class="row d-flex justify-content-center fondo-foto-carnet border-bottom">
+                        <img src="./Foto Carnet.jpg" id="foto-carnet" class="my-3 rounded" />
+                        <h4 class="t-color-secundario text-center"> Álvaro Garvín Guerrero </h4>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row mt-1">
+                                        <div class="col">
+                                            <h4 class="t-color-secundario"><u> Información Personal </u></h3>
+                                        </div>
+                                    </div>
+                                    <div class="row m-1" id="info_personal">
+                                        <div class="col d-flex justify-content-around flex-column">
+                                            <div class="row espacio">
+                                                <span><img src="img/Correo.png"></span>
+                                                <a href="mailto:garvinguerreroalvaro@gmail.com">
+                                                    garvinguerreroalvaro@gmail.com </a>
+                                            </div>
+                                            <div class="row espacio">
+                                                <span><img src="img/Telefono.png"></span>
+                                                <a href="tel:644977970"> +34644977970 </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col t-color-secundario">
+                                            <h4><u> Sobre mí </u></h4>
+                                            <p> Soy un chico con un gran entusiasmo por la programación y muy resolutivo
+                                                para los problemas, siempre de una u otra manera acabo resolviendolos, no me
+                                                doy por vencido hasta que acabo con el trabajo.</p>
+                                            <p> Una de mis mejores cualidades profesiones es el manejo en base de datos, he
+                                                estudiado y trabajado con ellas durante varios años, eso no significa que
+                                                solo sepa hacer eso, ya que tengo gran base en varios ambitos como el
+                                                desarrollo de aplicaciones web o moviles </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4 bg-color-primario">
-                <div class="row d-flex justify-content-center fondo-foto-carnet border-bottom">
-                    <img src="./Foto Carnet.jpg" id="foto-carnet" class="my-3 rounded-bottom"/>
-                    <h4 class="t-color-secundario"> Álvaro Garvín Guerrero </h4>
+        </div>
+
+        <div id="modo-movil" style="display: none;">
+            <div class="row my-2 py-2">
+                <div class="col-6">
+                    <div class="h-100 bg-color-primario rounded">
+                        <h4 class="t-color-secundario px-3 py-2"><u> Metodos de contacto </u></h4>
+                        <div class="px-3 d-flex flex-column justify-content-around h-50">
+                            <div>
+                                <span class="mr-4"><img src="img/Correo.png" class="iconos"></span>
+                                <a href="mailto:garvinguerreroalvaro@gmail.com">
+                                    Correo Electronico </a>
+                            </div>
+                            <div>
+                                <span class="mr-4"><img src="img/Telefono.png" class="iconos"></span>
+                                <a href="tel:644977970"> +34644977970 </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <div class="row mt-1">
-                                    <div class="col">
-                                        <h4 class="t-color-secundario"><u> Información Personal </u></h3>
-                                    </div>
-                                </div>
-                                <div class="row m-1" id="info_personal">
-                                    <div class="col d-flex justify-content-around flex-column">
-                                        <div class="row espacio">
-                                            <span><img src="img/Correo.png"></span>
-                                            <a href="mailto:garvinguerreroalvaro@gmail.com"> garvinguerreroalvaro@gmail.com </a>
+                <div class="col-6">
+                    <div class="bg-color-primario d-flex flex-column align-items-center rounded">
+                        <img src="./Foto Carnet.jpg" id="foto-carnet" class="mt-3 rounded" />
+                        <h4 class="my-3 t-color-secundario text-center"> Álvaro Garvín Guerrero </h4>    
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <div id="accordion">
+                        <div class="card bg-color-primario mb-2">
+                            <div class="card-header border-bottom">
+                                <a class="card-link t-color-secundario" data-toggle="collapse" href="#collapseFormacion">
+                                    Formación
+                                </a>
+                            </div>
+                            <div id="collapseFormacion" class="collapse show" data-parent="#accordion">
+                                <div class="card-body t-color-secundario">
+                                    <div class="px-3">
+                                        <div class="row d-flex flex-column ">
+                                            <p><b> Título Escolar de Bachiller - </b><a
+                                                    href="https://www.iesvirgendelcarmen.com/" target="_blank">Virgen del
+                                                    Carmen, Jaén </a></p>
+                                            <p class="d-flex justify-content-end"> 2019 - 2021 </p>
                                         </div>
-                                        <div class="row espacio">
-                                            <span><img src="img/Telefono.png"></span>
-                                            <a href="tel:644977970"> +34644977970 </a>
+                                        <hr class="bg-color-secundario mb-2 mt-1">
+                                        <div class="row d-flex flex-column">
+                                            <p><b> Curso de Programación de Videojuegos con GameMaker </b> - <a
+                                                    href="https://upmj.es/" target="_blank"> Universidad Popular, Jaén </a>
+                                            </p>
+                                            <p class="d-flex justify-content-end"> 2017 - 2019 </p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col t-color-secundario">
-                                        <h4><u> Sobre mí </u></h4>
-                                        <p> Soy un chico con un gran entusiasmo por la programación y muy resolutivo para los problemas, siempre de una u otra manera acabo resolviendolos, no me doy por vencido hasta que acabo con el trabajo.</p>
-                                        <p> Una de mis mejores cualidades profesiones es el manejo en base de datos, he estudiado y trabajado con ellas durante varios años, eso no significa que solo sepa hacer eso, ya que tengo gran base en varios ambitos como el desarrollo de aplicaciones web o moviles </p>
+                                        <hr class="bg-color-secundario mb-2 mt-1">
+                                        <div class="row d-flex flex-column">
+                                            <p><b> Curso Académico de Inglés </b> - <a
+                                                    href="https://centrobritanicojaen.com/" target="_blank"> Centro
+                                                    Británico Paseo de la Estación, Jaén </a></p>
+                                            <p class="d-flex justify-content-end"> 2016 - 2020 </p>
+                                        </div>
+                                        <hr class="bg-color-secundario mb-2 mt-1">
+                                        <div class="row d-flex flex-column">
+                                            <p><b> Título Formación Profesional Superior de Desarrollo de
+                                                Aplicaciones Multiplataforma </b> - <a href="https://escuelaestech.es/"
+                                                    target="_blank"> Escuela Estech, Linares </a></p>
+                                            <p class="d-flex justify-content-end"> 2021 - 2023 </p>
+                                        </div>
+                                        <hr class="bg-color-secundario mb-2 mt-1">
+                                        <div class="row d-flex flex-column">
+                                            <p><b> Grado en Ingeniería Informática </b> - <a
+                                                    href="https://www.ujaen.es/" target="_blank"> Universidad de Jaén, Jaén
+                                                </a></p>
+                                            <p class="d-flex justify-content-end"> 2023 - Actualidad </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-
+                        <div class="card bg-color-primario mb-2">
+                            <div class="card-header border-bottom">
+                                <a class="t-color-secundario collapsed card-link" data-toggle="collapse" href="#collapseGustos">
+                                    Gustos y Aficiones
+                                </a>
+                            </div>
+                            <div id="collapseGustos" class="collapse" data-parent="#accordion">
+                                <div class="card-body t-color-secundario">
+                                    <p> Desde una edad temprana he sentido un gran interés por el deporte,
+                                        practicando disciplinas como fútbol sala, fútbol 11, pádel y running,
+                                        entre otras. Esta pasión me ha permitido canalizar mi energía de forma
+                                        positiva, lo cual se refleja también en mi entorno profesional: me
+                                        esfuerzo constantemente por mejorar, asumir nuevos retos y contribuir al
+                                        crecimiento del equipo. </p>
+                                    <p> Me considero una persona sociable y cercana, con gran facilidad para
+                                        establecer relaciones interpersonales y siempre dispuesta a colaborar y
+                                        prestar ayuda cuando se necesita. </p>
+                                    <p> Además, afronto cada situación con una actitud positiva. Suelo encontrar
+                                        el lado constructivo incluso en las dificultades, lo que me permite
+                                        aprender de cada experiencia y transformarla en una oportunidad de
+                                        crecimiento personal y profesional. </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card bg-color-primario mb-2">
+                            <div class="card-header border-bottom">
+                                <a class="collapsed card-link t-color-secundario" data-toggle="collapse" href="#collapseExperiencia">
+                                    Experiencia Laboral
+                                </a>
+                            </div>
+                            <div id="collapseExperiencia" class="collapse" data-parent="#accordion">
+                                <div class="card-body t-color-secundario">
+                                    <ul>
+                                        <li><b> Prácticas de empresa </b></li>
+                                        <p> Al terminar el modulo superior, hice las practicas de empresa en <a
+                                                href="https://www.bowlinglinares.com/" target="_blank"> Bowling
+                                                Linares </a>, donde pude aprender mas sobre base de datos,
+                                            diseño web con typescript, tailwind y otras, backed tanto en php
+                                            como en VUE </p>
+                                        <li><b> 8 meses en Bowling Linares </b></li>
+                                        <p> Luego de terminar las practicas de empresa, bowling linares me
+                                            ofreció trabajar a tiempo parcial para terminar el proyecto que
+                                            habia empezado en las practicas, confiando en mi para ser el que
+                                            manejase el desarrollo del mismo. Estuve focalizado tanto en backend
+                                            como en el diseño y administración de la base de datos </p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card bg-color-primario mb-2">
+                            <div class="card-header border-bottom">
+                                <a class="collapsed card-link t-color-secundario" data-toggle="collapse" href="#collapseHabilidades">
+                                    Habilidades profesionales
+                                </a>
+                            </div>
+                            <div id="collapseHabilidades" class="collapse" data-parent="#accordion">
+                                <div class="card-body t-color-secundario">
+                                    <div class="row">
+                                        <div class="col-6 d-flex justify-content-around flex-column">
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/Bootstrap.png" title="Bootstrap 5" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> Bootstrap </h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/Android_Studio.png" title="Android Studio" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> Android </h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/CSS3.png" title="CSS 3" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> CSS 3</h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/DBeaver.png" title="DBeaver" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> DBeaver </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-around flex-column">
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/HTML5.png" title="HTML5" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> HTML 5 </h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/Laravel.png" title="Laravel" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> Laravel </h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/VUE3.png" title="VUE 3" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> VUE 3 </h5>
+                                                </div>
+                                            </div>
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/XCode.png" title="XCode" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> XCode </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex justify-content-around flex-column">
+                                            <div class="card d-flex align-items-center sin_borde bg-color-primario">
+                                                <img src="img/PHP.png" title="PHP" class="habilidades">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-center"> php </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="row pb-2 mb-2">
+                <div class="col">
+                    <div class="px-3 py-2 rounded bg-color-primario t-color-secundario"">
+                        <h4><u> Sobre mí </u></h4>
+                        <p> Soy un chico con un gran entusiasmo por la programación y muy resolutivo
+                            para los problemas, siempre de una u otra manera acabo resolviendolos, no me
+                            doy por vencido hasta que acabo con el trabajo.</p>
+                        <p> Una de mis mejores cualidades profesiones es el manejo en base de datos, he
+                            estudiado y trabajado con ellas durante varios años, eso no significa que
+                            solo sepa hacer eso, ya que tengo gran base en varios ambitos como el
+                            desarrollo de aplicaciones web o moviles </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
         function mostrarSlide(index) {
-          const slider = document.getElementById('slider');
-          const width = slider.clientWidth;
-          slider.scrollLeft = index * width;
+            const slider = document.getElementById('slider');
+            const width = slider.clientWidth;
+            slider.scrollLeft = index * width;
         }
+    </script>
+
+    <script>
+        function ajustarVista() {
+            if (window.innerWidth < 768) {
+                document.getElementById('modo-escritorio').style.display = 'none';
+                document.getElementById('modo-movil').style.display = 'block';
+            } else {
+                document.getElementById('modo-escritorio').style.display = 'block';
+                document.getElementById('modo-movil').style.display = 'none';
+            }
+        }
+
+        window.addEventListener('load', ajustarVista);
+        window.addEventListener('resize', ajustarVista);
     </script>
 </body>
 </html>

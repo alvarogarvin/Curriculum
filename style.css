@@ -5,6 +5,8 @@
         Enlaces: #f5deb3
 */
 
+/* COLORES */
+
 body, #cuerpo{
     min-height: 100vh;
 }
@@ -25,19 +27,7 @@ body, #cuerpo{
     color: #d8ffff;
 }
 
-#foto-carnet{
-    width: 55%;
-}
-
-#info{
-    height: 100%;
-}
-
-.info{
-    max-width: 75%;
-}
-
-a{
+p>a{
     color: #d8ffff;
     text-decoration: underline;
 }
@@ -46,89 +36,123 @@ a:hover{
     color: #f5deb3
 }
 
-.espacio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and ( min-width: 767px){
+    
+    #foto-carnet{
+        width: 55%;
+    }
+
+    #info{
+        height: 100%;
+    }
+
+    .info{
+        max-width: 75%;
+    }
+
+    .espacio{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #info_personal{
+        height: 100px;
+    }
+
+    /* button.active{
+        background-color: #d8ffff;
+        color: #010c1e;
+    } */
+
+    .boton{
+        background-color: #f5deb3;
+        color: #010c1e
+    }
+
+    .boton-secundario{
+        background-color: #d8ffff;
+        color: #010c1e;
+    }
+
+    /* MIS HABILIDADES */
+
+    section{
+        display: flex;
+        width: 600px;
+        height: auto;
+    }
+
+    section img {
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .5;
+        transition: .5s ease;
+        filter: grayscale(100%);
+        height: auto;
+        width: 0px;
+        max-height: max-content;
+        background-color: #d8ffff;
+        padding: 5px;
+    }
+
+    section img:hover{
+        cursor: crosshair;
+        width: 50px;
+        opacity: 1;
+        filter: contrast(120%);
+        filter: grayscale(0%);
+        max-height: max-content;
+        padding: 3px;
+    }
+
+    #habilidades{
+        height: 160px;
+    }
+
+    span{
+        width: 25px;
+        height: 25px;
+    }
+
+    span>img{
+        width: 100%;
+    }
+
+    .slider-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+
+        /* Quitar barra de deslizamiento en */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+    }
+
+    .slider-container::-webkit-scrollbar {
+        display: none; /* Quitar barra de delizamiento en Chrome, Safari y Opera */
+    }
+
+    .slider-item {
+        flex: 0 0 100%;
+    }
 }
 
-#info_personal{
-    height: 100px;
-}
+@media screen and (max-width:767px){
+    .habilidades {
+        height: 100px;
+        width: 100px;
+    }
 
-/* button.active{
-    background-color: #d8ffff;
-    color: #010c1e;
-} */
+    .sin_borde{
+        border: none;
+    }
 
-.boton{
-    background-color: #f5deb3;
-    color: #010c1e
-}
+    #foto-carnet{
+        width: 55%;
+    }
 
-.boton-secundario{
-    background-color: #d8ffff;
-    color: #010c1e;
-}
-
-/* MIS HABILIDADES */
-
-section{
-    display: flex;
-    width: 600px;
-    height: auto;
-}
-
-section img {
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .5;
-    transition: .5s ease;
-    filter: grayscale(100%);
-    height: auto;
-    width: 0px;
-    max-height: max-content;
-    background-color: #d8ffff;
-    padding: 5px;
-}
-
-section img:hover{
-    cursor: crosshair;
-    width: 50px;
-    opacity: 1;
-    filter: contrast(120%);
-    filter: grayscale(0%);
-    max-height: max-content;
-    padding: 3px;
-}
-
-#habilidades{
-    height: 160px;
-}
-
-span{
-    width: 25px;
-    height: 25px;
-}
-
-span>img{
-    width: 100%;
-}
-
-.slider-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-
-    /* Quitar barra de deslizamiento en */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE 10+ */
-}
-
-.slider-container::-webkit-scrollbar {
-    display: none; /* Quitar barra de delizamiento en Chrome, Safari y Opera */
-}
-
-.slider-item {
-    flex: 0 0 100%;
+    .iconos{
+        width: 10%;
+    }
 }
