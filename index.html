@@ -146,7 +146,7 @@
                                             <div class="row espacio">
                                                 <span><img src="img/Correo.png"></span>
                                                 <a href="mailto:garvinguerreroalvaro@gmail.com">
-                                                    garvinguerreroalvaro@gmail.com </a>
+                                                    Correo Electrónico </a>
                                             </div>
                                             <div class="row espacio">
                                                 <span><img src="img/Telefono.png"></span>
@@ -174,7 +174,7 @@
             </div>
         </div>
 
-        <div id="modo-movil" style="display: none;">
+        <div id="modo-movil">
             <div class="row my-2 py-2">
                 <div class="col-6">
                     <div class="h-100 bg-color-primario rounded">
@@ -403,7 +403,7 @@
 
     <script>
         function ajustarVista() {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth <= 768) {
                 document.getElementById('modo-escritorio').style.display = 'none';
                 document.getElementById('modo-movil').style.display = 'block';
             } else {
